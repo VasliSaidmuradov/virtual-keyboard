@@ -37,7 +37,10 @@ export default function renderKeybord() {
   }
 
   noteWrap.appendChild(noteList)
-
+  const author = document.createElement('span')
+  author.innerHTML = '<b><><b> with ❤ by <a href="https://github.com/VasliSaidmuradov/virtual-keyboard" target="_blank">Vasli</a>'
+  author.classList.add('author')
   app.appendChild(main)
   app.appendChild(noteWrap)
+  app.appendChild(author)
 }

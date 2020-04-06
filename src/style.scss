@@ -109,6 +109,24 @@ $silver: silver;
       color: #fff;
       box-shadow: 0 0 0 1px $bg;
       background-color: rgba($bg, .8);
+      border-radius: 5px;
+      position: relative;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        background-color: rgba($bg, .5);
+        box-shadow: 0 0 3px 2px rgba($bg, .5);
+      }
+      span {
+        transform: scale(1.2);
+        z-index: 10;
+      }
     }
 
     &_light-on {
@@ -137,11 +155,17 @@ $silver: silver;
   &__Space {
     flex-basis: 100%;
     padding: 0 20px;
+    &::after {
+      display: none;
+    }
   }
 
   &__38 {
     height: 24px;
     margin-bottom: 0;
+    &::after {
+      display: none;
+    }
   }
 
   &__40 {
@@ -149,6 +173,9 @@ $silver: silver;
     margin-top: 0;
     place-self: flex-end;
     margin-left: -55px;
+    &::after {
+      display: none;
+    }
   }
 
   &__20 {
@@ -182,5 +209,16 @@ $silver: silver;
   &__item:last-child {
     list-style: none;
     margin-top: 20px;
+  }
+}
+
+.author {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
   }
 }

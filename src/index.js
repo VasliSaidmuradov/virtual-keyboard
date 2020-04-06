@@ -85,3 +85,6 @@ document.addEventListener('keyup', (e) => {
     textArea.value += e.key
   }
 })
+
+// eslint-disable-next-line no-console
+console.log('KEEP THE CONSOLE CLEAN :)')
