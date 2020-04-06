@@ -23,8 +23,8 @@ module.exports = (env, options) => {
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: 'virtual keyboard',
         template: './src/index.html',
+        favicon: './src/assets/favicon.ico',
       }),
       new MiniCssExtractPlugin({
         filename: 'style.css',
@@ -54,7 +54,7 @@ module.exports = (env, options) => {
           ],
         },
         {
-          test: /\.(woff|woff2|eot|ttf|otf|png|svg|jp[e]*g|gif)$/,
+          test: /\.(woff|woff2|eot|ttf|otf|png|svg|jp[e]*g|gif|ico)$/,
           use: [
             'file-loader',
           ],
